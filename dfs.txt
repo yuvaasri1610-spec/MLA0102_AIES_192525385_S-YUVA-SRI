@@ -1,0 +1,12 @@
+START
+
+Mark the current node as visited.
+Print the current node.
+
+FOR each adjacent node
+    IF node is not visited
+        Call DFS(node).
+    END IF
+END FOR
+
+STOP

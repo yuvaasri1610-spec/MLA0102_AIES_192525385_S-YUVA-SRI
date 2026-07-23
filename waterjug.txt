@@ -1,0 +1,40 @@
+BEGIN
+
+Input Jug1 capacity, Jug2 capacity, Target
+
+Create an empty set VISITED
+Create a queue Q
+
+Insert (0, 0) into Q
+
+WHILE Q is not empty DO
+
+    Remove the front state (x, y) from Q
+
+    IF (x, y) is already visited THEN
+        Continue
+    END IF
+
+    Mark (x, y) as visited
+
+    Print (x, y)
+
+    IF x = Target OR y = Target THEN
+        Print "Target Reached"
+        STOP
+    END IF
+
+    Insert the following new states into Q:
+
+        Fill Jug1
+        Fill Jug2
+        Empty Jug1
+        Empty Jug2
+        Pour water from Jug1 to Jug2
+        Pour water from Jug2 to Jug1
+
+END WHILE
+
+Print "Target cannot be reached"
+
+END

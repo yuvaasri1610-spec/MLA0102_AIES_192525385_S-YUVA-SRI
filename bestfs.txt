@@ -1,0 +1,21 @@
+BEGIN
+
+Create a priority queue PQ
+Insert the start node with its heuristic value
+
+WHILE PQ is not empty DO
+    Remove the node having the smallest heuristic value
+
+    IF node is the goal THEN
+        Print the path
+        STOP
+    END IF
+
+    Mark node as visited
+
+    FOR each unvisited neighbour DO
+        Insert neighbour into PQ using heuristic value
+    END FOR
+END WHILE
+
+END

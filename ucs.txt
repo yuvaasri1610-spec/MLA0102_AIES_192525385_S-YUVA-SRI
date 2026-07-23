@@ -1,0 +1,20 @@
+BEGIN
+
+Create a priority queue PQ
+Insert the start node with cost 0
+
+WHILE PQ is not empty DO
+    Remove the node with the lowest cost
+
+    IF node is the goal THEN
+        Print the minimum cost
+        STOP
+    END IF
+
+    FOR each neighbouring node DO
+        Calculate new path cost
+        Insert neighbour with new cost into PQ
+    END FOR
+END WHILE
+
+END

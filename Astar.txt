@@ -1,0 +1,23 @@
+BEGIN
+
+Create a priority queue PQ
+Insert the start node with f(n) = g(n) + h(n)
+
+WHILE PQ is not empty DO
+    Remove the node with the smallest f(n)
+
+    IF node is the goal THEN
+        Print the optimal path and cost
+        STOP
+    END IF
+
+    FOR each neighbour DO
+        g(n) = current path cost + edge cost
+        h(n) = heuristic value
+        f(n) = g(n) + h(n)
+
+        Insert neighbour into PQ with f(n)
+    END FOR
+END WHILE
+
+END

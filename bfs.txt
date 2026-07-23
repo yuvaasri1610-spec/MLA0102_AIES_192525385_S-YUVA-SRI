@@ -1,0 +1,19 @@
+START
+
+Create an empty queue.
+Mark the start node as visited.
+Insert the start node into the queue.
+
+WHILE queue is not empty
+    Remove the front node.
+    Print the node.
+
+    FOR each adjacent node
+        IF node is not visited
+            Mark it as visited.
+            Insert it into the queue.
+        END IF
+    END FOR
+END WHILE
+
+STOP

@@ -1,0 +1,22 @@
+MINIMAX(node, depth, isMax)
+
+    IF depth = 0 THEN
+        RETURN node
+
+    IF isMax = TRUE THEN
+        value = -∞
+
+        FOR each child in node DO
+            value = MAX(value,
+                        MINIMAX(child, depth - 1, FALSE))
+
+        RETURN value
+
+    ELSE
+        value = +∞
+
+        FOR each child in node DO
+            value = MIN(value,
+                        MINIMAX(child, depth - 1, TRUE))
+
+        RETURN value

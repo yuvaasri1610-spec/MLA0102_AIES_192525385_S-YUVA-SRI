@@ -1,0 +1,34 @@
+ALPHA-BETA(node, depth, α, β, isMax)
+
+    IF depth = 0 THEN
+        RETURN node
+
+    IF isMax = TRUE THEN
+        value = -∞
+
+        FOR each child in node DO
+            value = MAX(value,
+                        ALPHA-BETA(child, depth - 1,
+                                   α, β, FALSE))
+
+            α = MAX(α, value)
+
+            IF α >= β THEN
+                BREAK
+
+        RETURN value
+
+    ELSE
+        value = +∞
+
+        FOR each child in node DO
+            value = MIN(value,
+                        ALPHA-BETA(child, depth - 1,
+                                   α, β, TRUE))
+
+            β = MIN(β, value)
+
+            IF α >= β THEN
+                BREAK
+
+        RETURN value

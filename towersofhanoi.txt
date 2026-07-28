@@ -1,0 +1,13 @@
+Algorithm TowersOfHanoi(n, Source, Auxiliary, Destination)
+
+Step 1: If n = 1, then
+            Print "Move container 1 from Source to Destination"
+            Return
+
+Step 2: Call TowersOfHanoi(n-1, Source, Destination, Auxiliary)
+
+Step 3: Print "Move container n from Source to Destination"
+
+Step 4: Call TowersOfHanoi(n-1, Auxiliary, Source, Destination)
+
+Step 5: Stop

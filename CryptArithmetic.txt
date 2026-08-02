@@ -1,0 +1,33 @@
+Algorithm: Solve_CryptArithmetic
+
+Start
+
+1. Define the words:
+      SEND
+      MORE
+      MONEY
+
+2. Find all unique letters.
+
+3. Assign a unique digit (0–9) to each letter.
+
+4. Ensure the first letters (S and M) are not assigned 0.
+
+5. Convert the words into numbers:
+      SEND
+      MORE
+      MONEY
+
+6. Check whether:
+      SEND + MORE = MONEY
+
+7. If the equation is true then
+      Print "Solution Found"
+      Print the digit assignment
+      Print SEND, MORE, and MONEY
+   Else
+      Try another digit assignment.
+
+8. Repeat until a valid solution is found.
+
+Stop
